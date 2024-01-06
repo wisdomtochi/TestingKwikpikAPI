@@ -17,15 +17,8 @@ namespace TestingKwikpikAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Post()
         {
-            try
-            {
-                var response = await authenticateAPI.GetAuthentication();
-                return Ok(response);
-            }
-            catch (HttpRequestException ex)
-            {
-                return BadRequest($"{ex.Message}");
-            }
+            var response = await authenticateAPI.GetAuthentication();
+            return Ok(response);
         }
     }
 }

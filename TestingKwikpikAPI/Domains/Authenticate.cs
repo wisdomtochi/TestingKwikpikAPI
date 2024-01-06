@@ -1,6 +1,5 @@
 ﻿namespace TestingKwikpikAPI.Domains
 {
-
     public class Authenticate
     {
         public string id { get; set; }
