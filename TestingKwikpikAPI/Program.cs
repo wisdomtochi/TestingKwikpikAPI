@@ -9,8 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IHomeAPI, HomeAPI>();
 builder.Services.AddScoped<IAuthenticateAPI, AuthenticateAPI>();
-builder.Services.AddHttpClient<IHomeAPI, HomeAPI>();
-builder.Services.AddHttpClient<IAuthenticateAPI, AuthenticateAPI>();
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

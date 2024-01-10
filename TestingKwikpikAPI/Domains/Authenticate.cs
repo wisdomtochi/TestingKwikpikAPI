@@ -1,5 +1,6 @@
 ﻿namespace TestingKwikpikAPI.Domains
 {
+
     public class Authenticate
     {
         public string id { get; set; }
@@ -11,5 +12,4 @@
         public DateTime updatedAt { get; set; }
         public string token { get; set; }
     }
-
 }
