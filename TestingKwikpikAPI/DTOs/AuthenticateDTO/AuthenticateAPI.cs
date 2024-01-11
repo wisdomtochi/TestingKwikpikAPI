@@ -8,9 +8,9 @@ namespace TestingKwikpikAPI.DTOs.AuthenticateDTO
     {
         private readonly HttpClient httpClient;
 
-        public AuthenticateAPI(IHttpClientFactory httpClientFactory)
+        public AuthenticateAPI(HttpClient httpClient)
         {
-            this.httpClient = httpClientFactory.CreateClient();
+            this.httpClient = httpClient;
         }
         public async Task<Authenticate> GetAuthentication()
         {

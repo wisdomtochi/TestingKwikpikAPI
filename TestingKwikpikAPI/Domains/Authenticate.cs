@@ -1,7 +1,13 @@
 ﻿namespace TestingKwikpikAPI.Domains
 {
 
+
     public class Authenticate
+    {
+        public Result result { get; set; }
+    }
+
+    public class Result
     {
         public string id { get; set; }
         public string name { get; set; }
@@ -12,4 +18,5 @@
         public DateTime updatedAt { get; set; }
         public string token { get; set; }
     }
+
 }

@@ -1,6 +1,12 @@
 ﻿namespace TestingKwikpikAPI.Domains
 {
+
     public class Wallet
+    {
+        public Result result { get; set; }
+    }
+
+    public class Result
     {
         public string id { get; set; }
         public string userId { get; set; }
@@ -15,4 +21,5 @@
     public class Extrawallets
     {
     }
+
 }
