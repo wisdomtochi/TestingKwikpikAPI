@@ -12,7 +12,7 @@ namespace TestingKwikpikAPI.DTOs.AuthenticateDTO
         {
             this.httpClient = httpClientFactory.CreateClient();
         }
-        public async Task<Wallet> GetAuthentication()
+        public async Task<Authenticate> GetAuthentication()
         {
             try
             {
@@ -25,9 +25,9 @@ namespace TestingKwikpikAPI.DTOs.AuthenticateDTO
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("X-API-Key", apiKey);
 
-                var result = await httpClient.GetAsync("wallet/business");
+                var result = await httpClient.GetAsync("business/authenticate");
                 var response = await result.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<Wallet>(response);
+                return JsonSerializer.Deserialize<Authenticate>(response);
             }
             catch (Exception)
             {

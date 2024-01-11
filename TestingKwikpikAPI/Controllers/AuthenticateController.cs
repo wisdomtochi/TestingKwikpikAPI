@@ -14,8 +14,8 @@ namespace TestingKwikpikAPI.Controllers
             this.authenticateAPI = authenticateAPI;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Post()
+        [HttpGet]
+        public async Task<IActionResult> Get()
         {
             var response = await authenticateAPI.GetAuthentication();
             return Ok(response);
