@@ -2,10 +2,10 @@
 {
     public class AuthenticateDTO
     {
-        public AuthenticateProperties authenticateProperties { get; set; }
+        public result result { get; set; }
     }
 
-    public class AuthenticateProperties
+    public class result
     {
         public string id { get; set; }
         public string name { get; set; }

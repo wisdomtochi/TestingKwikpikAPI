@@ -8,9 +8,9 @@ namespace TestingKwikpikAPI.Data_Access.WalletRepo
     {
         private readonly HttpClient httpClient;
 
-        public WalletAPI(IHttpClientFactory httpClientFactory)
+        public WalletAPI(HttpClient httpClient)
         {
-            this.httpClient = httpClientFactory.CreateClient();
+            this.httpClient = httpClient;
         }
 
         public async Task<WalletDTO> GetWalletDetails()
