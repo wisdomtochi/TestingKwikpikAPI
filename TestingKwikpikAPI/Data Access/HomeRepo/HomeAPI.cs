@@ -1,8 +1,8 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
-using TestingKwikpikAPI.Domains;
+using TestingKwikpikAPI.DTO;
 
-namespace TestingKwikpikAPI.DTOs.HomeDTO
+namespace TestingKwikpikAPI.Data_Access.HomeRepo
 {
     public class HomeAPI : IHomeAPI
     {
@@ -13,7 +13,7 @@ namespace TestingKwikpikAPI.DTOs.HomeDTO
             this.httpClient = httpClientFactory.CreateClient();
         }
 
-        public async Task<Message> GetMessage()
+        public async Task<HomeDTO> GetMessage()
         {
             httpClient.BaseAddress = new Uri("https://gateway.kwikpik.io");
             httpClient.DefaultRequestHeaders.Accept.Clear();
@@ -22,7 +22,7 @@ namespace TestingKwikpikAPI.DTOs.HomeDTO
             var response = await httpClient.GetAsync("/api");
             //response.EnsureSuccessStatusCode();
             var result = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<Message>(result);
+            return JsonSerializer.Deserialize<DTO.HomeDTO>(result);
         }
     }
 }

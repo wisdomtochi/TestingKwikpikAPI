@@ -1,13 +1,11 @@
-﻿namespace TestingKwikpikAPI.Domains
+﻿namespace TestingKwikpikAPI.DTO
 {
-
-
-    public class Authenticate
+    public class AuthenticateDTO
     {
-        public Result result { get; set; }
+        public AuthenticateProperties authenticateProperties { get; set; }
     }
 
-    public class Result
+    public class AuthenticateProperties
     {
         public string id { get; set; }
         public string name { get; set; }

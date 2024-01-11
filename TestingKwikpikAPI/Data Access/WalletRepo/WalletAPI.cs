@@ -1,18 +1,18 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
-using TestingKwikpikAPI.Domains;
 
-namespace TestingKwikpikAPI.DTOs.AuthenticateDTO
+namespace TestingKwikpikAPI.Data_Access.WalletRepo
 {
-    public class AuthenticateAPI : IAuthenticateAPI
+    public class WalletAPI : IWalletAPI
     {
         private readonly HttpClient httpClient;
 
-        public AuthenticateAPI(HttpClient httpClient)
+        public WalletAPI(IHttpClientFactory httpClientFactory)
         {
-            this.httpClient = httpClient;
+            this.httpClient = httpClientFactory.CreateClient();
         }
-        public async Task<Authenticate> GetAuthentication()
+
+        public async Task<WalletDTO> GetWalletDetails()
         {
             try
             {
@@ -25,9 +25,9 @@ namespace TestingKwikpikAPI.DTOs.AuthenticateDTO
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("X-API-Key", apiKey);
 
-                var result = await httpClient.GetAsync("business/authenticate");
+                var result = await httpClient.GetAsync("wallet/business");
                 var response = await result.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<Authenticate>(response);
+                return JsonSerializer.Deserialize<WalletDTO>(response);
             }
             catch (Exception)
             {

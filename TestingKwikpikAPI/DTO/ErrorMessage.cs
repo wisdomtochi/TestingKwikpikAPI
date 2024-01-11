@@ -1,4 +1,4 @@
-﻿namespace TestingKwikpikAPI.Domains
+﻿namespace TestingKwikpikAPI.DTO
 {
     public class ErrorMessage
     {

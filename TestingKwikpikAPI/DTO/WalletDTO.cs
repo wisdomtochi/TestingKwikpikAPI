@@ -1,12 +1,12 @@
-﻿namespace TestingKwikpikAPI.Domains
+﻿namespace TestingKwikpikAPI.DTO
 {
 
     public class Wallet
     {
-        public Result result { get; set; }
+        public WalletProperties walletProperties { get; set; }
     }
 
-    public class Result
+    public class WalletProperties
     {
         public string id { get; set; }
         public string userId { get; set; }
