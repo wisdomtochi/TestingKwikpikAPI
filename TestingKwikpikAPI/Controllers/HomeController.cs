@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TestingKwikpikAPI.DTOs.HomeDTO;
+using TestingKwikpikAPI.Data_Access.HomeRepo;
 
 namespace TestingKwikpikAPI.Controllers
 {

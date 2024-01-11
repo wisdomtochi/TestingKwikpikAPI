@@ -1,7 +1,7 @@
 ﻿namespace TestingKwikpikAPI.DTO
 {
 
-    public class Wallet
+    public class WalletDTO
     {
         public WalletProperties walletProperties { get; set; }
     }

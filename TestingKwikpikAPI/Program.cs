@@ -1,5 +1,6 @@
-using TestingKwikpikAPI.DTOs.AuthenticateDTO;
-using TestingKwikpikAPI.DTOs.HomeDTO;
+using TestingKwikpikAPI.Data_Access.AuthenticateRepo;
+using TestingKwikpikAPI.Data_Access.HomeRepo;
+using TestingKwikpikAPI.Data_Access.WalletRepo;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<IHomeAPI, HomeAPI>();
 builder.Services.AddHttpClient<IAuthenticateAPI, AuthenticateAPI>();
+builder.Services.AddHttpClient<IWalletAPI, WalletAPI>();
 
 var app = builder.Build();
 
