@@ -7,9 +7,9 @@ namespace TestingKwikpikAPI.Controllers
     [ApiController]
     public class WalletController : ControllerBase
     {
-        private readonly WalletAPI walletAPI;
+        private readonly IWalletAPI walletAPI;
 
-        public WalletController(WalletAPI walletAPI)
+        public WalletController(IWalletAPI walletAPI)
         {
             this.walletAPI = walletAPI;
         }
