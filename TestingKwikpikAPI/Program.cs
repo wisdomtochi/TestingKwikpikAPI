@@ -1,4 +1,5 @@
 using TestingKwikpikAPI.Data_Access.AuthenticateRepo;
+using TestingKwikpikAPI.Data_Access.CreateDispatchRequestRepo;
 using TestingKwikpikAPI.Data_Access.HomeRepo;
 using TestingKwikpikAPI.Data_Access.WalletRepo;
 
@@ -11,6 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<IHomeAPI, HomeAPI>();
 builder.Services.AddHttpClient<IAuthenticateAPI, AuthenticateAPI>();
 builder.Services.AddHttpClient<IWalletAPI, WalletAPI>();
+builder.Services.AddHttpClient<ICreateDispatchRequestAPI, CreateDispatchRequestAPI>();
 
 var app = builder.Build();
 
