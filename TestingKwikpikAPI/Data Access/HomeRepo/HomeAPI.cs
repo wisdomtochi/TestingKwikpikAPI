@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
-using TestingKwikpikAPI.DTO;
+using TestingKwikpikAPI.DTO.Home;
 
 namespace TestingKwikpikAPI.Data_Access.HomeRepo
 {
@@ -22,7 +22,7 @@ namespace TestingKwikpikAPI.Data_Access.HomeRepo
             var response = await httpClient.GetAsync("/api");
             //response.EnsureSuccessStatusCode();
             var result = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<DTO.HomeDTO>(result);
+            return JsonSerializer.Deserialize<HomeDTO>(result);
         }
     }
 }

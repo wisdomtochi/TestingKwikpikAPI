@@ -1,4 +1,4 @@
-﻿namespace TestingKwikpikAPI.DTO
+﻿namespace TestingKwikpikAPI.DTO.Wallet
 {
     public class WalletDTO
     {

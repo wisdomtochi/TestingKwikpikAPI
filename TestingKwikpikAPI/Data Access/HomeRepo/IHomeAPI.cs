@@ -1,4 +1,4 @@
-﻿using TestingKwikpikAPI.DTO;
+﻿using TestingKwikpikAPI.DTO.Home;
 
 namespace TestingKwikpikAPI.Data_Access.HomeRepo
 {

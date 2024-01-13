@@ -1,4 +1,4 @@
-﻿using TestingKwikpikAPI.DTO;
+﻿using TestingKwikpikAPI.DTO.Authenticate;
 
 namespace TestingKwikpikAPI.Data_Access.AuthenticateRepo
 {

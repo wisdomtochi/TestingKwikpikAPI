@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
-using TestingKwikpikAPI.DTO;
+using TestingKwikpikAPI.DTO.Wallet;
 
 namespace TestingKwikpikAPI.Data_Access.WalletRepo
 {

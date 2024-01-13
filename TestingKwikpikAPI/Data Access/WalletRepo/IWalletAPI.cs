@@ -1,4 +1,4 @@
-﻿using TestingKwikpikAPI.DTO;
+﻿using TestingKwikpikAPI.DTO.Wallet;
 
 namespace TestingKwikpikAPI.Data_Access.WalletRepo
 {
