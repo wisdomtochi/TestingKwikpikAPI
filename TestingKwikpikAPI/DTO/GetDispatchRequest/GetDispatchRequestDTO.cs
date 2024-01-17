@@ -1,18 +1,21 @@
-﻿namespace TestingKwikpikAPI.DTO.CreateDispatchRequest
+﻿namespace TestingKwikpikAPI.DTO.GetDispatchRequest
 {
-
-    public class CreateDispatchRequestDTO
+    public class GetDispatchRequestDTO
     {
         public Result result { get; set; }
     }
 
     public class Result
     {
-        public Data data { get; set; }
-    }
-
-    public class Data
-    {
+        public string id { get; set; }
+        public string status { get; set; }
+        public string userId { get; set; }
+        public object riderId { get; set; }
+        public bool isInTransit { get; set; }
+        public bool isUserRated { get; set; }
+        public bool isRiderRated { get; set; }
+        public DateTime createdAt { get; set; }
+        public DateTime updatedAt { get; set; }
         public Location location { get; set; }
         public Packagedetails packageDetails { get; set; }
         public string selectedVehicleType { get; set; }
@@ -23,12 +26,14 @@
         public string phoneNumber { get; set; }
         public string senderName { get; set; }
         public string currency { get; set; }
+        public float amount { get; set; }
     }
 
     public class Location
     {
         public float latitude { get; set; }
         public float longitude { get; set; }
+        public string formattedAddress { get; set; }
     }
 
     public class Packagedetails
@@ -46,6 +51,6 @@
     {
         public float latitude { get; set; }
         public float longitude { get; set; }
+        public string formattedAddress { get; set; }
     }
-
 }
