@@ -8,9 +8,9 @@ namespace TestingKwikpikAPI.Data_Access.GetDispatchRequestRepo
     {
         private readonly HttpClient httpClient;
 
-        public GetDispatchRequestAPI(IHttpClientFactory clientFactory)
+        public GetDispatchRequestAPI(HttpClient httpCLient)
         {
-            httpClient = clientFactory.CreateClient();
+            httpClient = httpCLient;
         }
         public async Task<GetDispatchRequestDTO> GetDispatchRequest(string id)
         {
@@ -21,7 +21,7 @@ namespace TestingKwikpikAPI.Data_Access.GetDispatchRequestRepo
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 //httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("X-API-Key", "fGKa77uvaeROvwh1MXR7X63VOtWXIomjBKQDbacI31EEafOD49Er4HXuALsc");
 
-                var result = await httpClient.GetAsync($"ride_request/{id}");
+                var result = await httpClient.GetAsync("ride_request/" + id);
                 var response = await result.Content.ReadAsStringAsync();
                 return JsonSerializer.Deserialize<GetDispatchRequestDTO>(response);
             }

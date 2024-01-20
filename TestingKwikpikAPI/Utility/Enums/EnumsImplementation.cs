@@ -2,7 +2,7 @@
 {
     public class EnumsImplementation
     {
-        public string ConfirmationMessage(Enums enums)
+        public static string ConfirmationMessage(Enums enums)
         {
             return enums switch
             {

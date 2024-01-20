@@ -1,7 +1,7 @@
-﻿namespace TestingKwikpikAPI.DTO.CreateDispatchRequest
+﻿namespace TestingKwikpikAPI.DTO.CreateSingleRequest
 {
 
-    public class CreateDispatchRequestDTO
+    public class CreateSingleRequestDTO
     {
         public Result result { get; set; }
     }
@@ -36,7 +36,7 @@
         public string category { get; set; }
         public string product { get; set; }
         public string description { get; set; }
-        public int weight { get; set; }
+        public string weight { get; set; }
         public int quantity { get; set; }
         public string image { get; set; }
         public object value { get; set; }
