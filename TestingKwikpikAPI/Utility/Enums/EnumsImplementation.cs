@@ -7,6 +7,8 @@
             return enums switch
             {
                 Enums.DispatchRequestCreated => "Dispatch Request Created",
+                Enums.BatchRequestCreated => "Batch Request Created",
+                Enums.FillSomething => "Fill Something",
                 _ => "Try again",
             };
         }

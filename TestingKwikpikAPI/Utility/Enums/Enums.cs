@@ -2,6 +2,8 @@
 {
     public enum Enums
     {
-        DispatchRequestCreated
+        DispatchRequestCreated,
+        BatchRequestCreated,
+        FillSomething
     }
 }

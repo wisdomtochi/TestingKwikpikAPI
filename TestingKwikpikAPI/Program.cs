@@ -1,4 +1,5 @@
 using TestingKwikpikAPI.Data_Access.AuthenticateRepo;
+using TestingKwikpikAPI.Data_Access.CreateBatchRequestRepo;
 using TestingKwikpikAPI.Data_Access.CreateSingleRequestRepo;
 using TestingKwikpikAPI.Data_Access.GetDispatchRequestRepo;
 using TestingKwikpikAPI.Data_Access.HomeRepo;
@@ -14,6 +15,7 @@ builder.Services.AddHttpClient<IHomeAPI, HomeAPI>();
 builder.Services.AddHttpClient<IAuthenticateAPI, AuthenticateAPI>();
 builder.Services.AddHttpClient<IWalletAPI, WalletAPI>();
 builder.Services.AddHttpClient<ICreateSingleRequestAPI, CreateSingleRequestAPI>();
+builder.Services.AddHttpClient<ICreateBatchRequestAPI, CreateBatchRequestAPI>();
 builder.Services.AddHttpClient<IGetDispatchRequestAPI, GetDispatchRequestAPI>();
 
 var app = builder.Build();
