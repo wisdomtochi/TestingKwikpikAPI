@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\TestingKwikpikAPI.csproj": {}
+    "C:\\Code Involved Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\TestingKwikpikAPI.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\TestingKwikpikAPI.csproj": {
+    "C:\\Code Involved Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\TestingKwikpikAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\TestingKwikpikAPI.csproj",
+        "projectUniqueName": "C:\\Code Involved Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\TestingKwikpikAPI.csproj",
         "projectName": "TestingKwikpikAPI",
-        "projectPath": "C:\\Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\TestingKwikpikAPI.csproj",
+        "projectPath": "C:\\Code Involved Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\TestingKwikpikAPI.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\obj\\",
+        "outputPath": "C:\\Code Involved Projects\\TestingKwikpikAPI\\TestingKwikpikAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

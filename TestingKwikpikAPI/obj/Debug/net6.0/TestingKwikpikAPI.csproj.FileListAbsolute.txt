@@ -30,3 +30,35 @@ C:\Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\refint\TestingK
 C:\Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.pdb
 C:\Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.genruntimeconfig.cache
 C:\Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\ref\TestingKwikpikAPI.dll
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\appsettings.Development.json
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\appsettings.json
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\TestingKwikpikAPI.exe
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\TestingKwikpikAPI.deps.json
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\TestingKwikpikAPI.runtimeconfig.json
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\TestingKwikpikAPI.dll
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\TestingKwikpikAPI.pdb
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.csproj.AssemblyReference.cache
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.AssemblyInfoInputs.cache
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.AssemblyInfo.cs
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.csproj.CoreCompileInputs.cache
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\staticwebassets\msbuild.TestingKwikpikAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.TestingKwikpikAPI.props
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TestingKwikpikAPI.props
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TestingKwikpikAPI.props
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\staticwebassets.build.json
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\staticwebassets.development.json
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\scopedcss\bundle\TestingKwikpikAPI.styles.css
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.csproj.CopyComplete
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.dll
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\refint\TestingKwikpikAPI.dll
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.pdb
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\TestingKwikpikAPI.genruntimeconfig.cache
+C:\Code Involved Projects\TestingKwikpikAPI\TestingKwikpikAPI\obj\Debug\net6.0\ref\TestingKwikpikAPI.dll

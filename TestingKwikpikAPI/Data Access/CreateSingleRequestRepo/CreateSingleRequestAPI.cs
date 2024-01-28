@@ -13,24 +13,23 @@ namespace TestingKwikpikAPI.Data_Access.CreateSingleRequestRepo
             this.httpClient = httpClient;
         }
 
-        public async Task<string> CreateSingleRequest(CreateSingleRequestDTO dispatchRequestDTO)
+        public async Task<string> CreateSingleRequest(CreateSingleRequestDTO singleRequestDTO)
         {
 
             //throw new NotImplementedException();
             try
             {
                 dynamic payLoad = new System.Dynamic.ExpandoObject();
-                payLoad.location = dispatchRequestDTO.result.data.location;
-                payLoad.package_details = dispatchRequestDTO.result.data.packageDetails;
-                payLoad.phone_number = dispatchRequestDTO.result.data.phoneNumber;
-                payLoad.recipient_name = dispatchRequestDTO.result.data.recipientName;
-                payLoad.recipient_phoneNumber = dispatchRequestDTO.result.data.recipientPhoneNumber;
-                payLoad.sender_name = dispatchRequestDTO.result.data.senderName;
-                payLoad.currency = dispatchRequestDTO.result.data.currency;
-                payLoad.selected_vehicle_type = dispatchRequestDTO.result.data.selectedVehicleType;
-                payLoad.destination = dispatchRequestDTO.result.data.destination;
-                payLoad.user_type = dispatchRequestDTO.result.data.userType;
-
+                payLoad.location = singleRequestDTO.result.data.location;
+                payLoad.package_details = singleRequestDTO.result.data.packageDetails;
+                payLoad.phone_number = singleRequestDTO.result.data.phoneNumber;
+                payLoad.recipient_name = singleRequestDTO.result.data.recipientName;
+                payLoad.recipient_phoneNumber = singleRequestDTO.result.data.recipientPhoneNumber;
+                payLoad.sender_name = singleRequestDTO.result.data.senderName;
+                payLoad.currency = singleRequestDTO.result.data.currency;
+                payLoad.selected_vehicle_type = singleRequestDTO.result.data.selectedVehicleType;
+                payLoad.destination = singleRequestDTO.result.data.destination;
+                payLoad.user_type = singleRequestDTO.result.data.userType;
 
                 var baseUri = new Uri("https://dev-gateway.kwikpik.io/api/");
                 var uri = new Uri(baseUri, "broker/init_request_ride/business");

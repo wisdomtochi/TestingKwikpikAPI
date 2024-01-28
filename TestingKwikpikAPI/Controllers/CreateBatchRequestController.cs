@@ -8,17 +8,17 @@ namespace TestingKwikpikAPI.Controllers
     [ApiController]
     public class CreateBatchRequestController : ControllerBase
     {
-        private readonly CreateBatchRequestAPI createBatchRequest;
+        private readonly ICreateBatchRequestAPI createBatchRequestAPI;
 
-        public CreateBatchRequestController(CreateBatchRequestAPI createBatchRequest)
+        public CreateBatchRequestController(ICreateBatchRequestAPI createBatchRequest)
         {
-            this.createBatchRequest = createBatchRequest;
+            this.createBatchRequestAPI = createBatchRequest;
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateBatchRequest([FromBody] CreateBatchRequestDTO createBatchRequestDTO)
+        public async Task<IActionResult> CreateBatchRequest(CreateBatchRequestDTO createBatch)
         {
-            var response = await createBatchRequest.CreateBatchRequest(createBatchRequestDTO);
+            var response = await createBatchRequestAPI.CreateBatchRequest(createBatch);
             return Ok(response);
         }
     }
