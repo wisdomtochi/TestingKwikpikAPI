@@ -26,7 +26,7 @@ namespace TestingKwikpikAPI.Data_Access.CreateBatchRequestRepo
                     };
 
                     var baseUri = new Uri("https://dev-gateway.kwikpik.io/api/");
-                    var uri = new Uri(baseUri, "broker/init_request_ride/business");
+                    var uri = new Uri(baseUri, "broker/init_multiple_ride_request/business");
 
                     httpClient.BaseAddress = baseUri;
                     httpClient.DefaultRequestHeaders.Accept.Clear();
