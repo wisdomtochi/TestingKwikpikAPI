@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TestingKwikpikAPI.Data_Access.CreateBatchRequestRepo;
-using TestingKwikpikAPI.DTO.CreateBatchRequest;
 
 namespace TestingKwikpikAPI.Controllers
 {
@@ -15,11 +14,18 @@ namespace TestingKwikpikAPI.Controllers
             this.createBatchRequestAPI = createBatchRequest;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateBatchRequest(CreateBatchRequestDTO createBatch)
+        [HttpGet]
+        public async Task<IActionResult> GetWord()
         {
-            var response = await createBatchRequestAPI.CreateBatchRequest(createBatch);
-            return Ok(response);
+            var word = "Hello World";
+            return Ok(word);
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> CreateBatchRequest(CreateBatchRequestDTO createBatch)
+        //{
+        //    var response = await createBatchRequestAPI.CreateBatchRequest(createBatch);
+        //    return Ok(response);
+        //}
     }
 }

@@ -14,15 +14,14 @@ namespace TestingKwikpikAPI.Data_Access.CreateBatchRequestRepo
         }
         public async Task<string> CreateBatchRequest(CreateBatchRequestDTO batchRequestDTO)
         {
-            //throw new NotImplementedException();
             try
             {
-                bool hasItems = batchRequestDTO.result.datum.Any();
+                bool hasItems = batchRequestDTO.result.data.Any();
                 if (hasItems)
                 {
-                    CreateBatchRequestDTO batchRequest = new()
+                    var batchRequest = new
                     {
-                        result = batchRequestDTO.result
+                        data = batchRequestDTO.result.data
                     };
 
                     var baseUri = new Uri("https://dev-gateway.kwikpik.io/api/");

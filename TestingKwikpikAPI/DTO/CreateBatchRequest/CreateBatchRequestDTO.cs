@@ -7,7 +7,7 @@
 
     public class Result
     {
-        public Datum[] datum { get; set; }
+        public Datum[] data { get; set; }
     }
 
     public class Datum
@@ -27,7 +27,7 @@
         public string phoneNumber { get; set; }
         public string senderName { get; set; }
         public string recipientEmail { get; set; }
-        public string currency { get; set; }
+        public object currency { get; set; }
     }
 
     public class Location
@@ -44,7 +44,7 @@
         public string weight { get; set; }
         public int quantity { get; set; }
         public string image { get; set; }
-        public object value { get; set; }
+        public int value { get; set; }
     }
 
     public class Destination
