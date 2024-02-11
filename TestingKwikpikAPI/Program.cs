@@ -1,11 +1,11 @@
-using TestingKwikpikAPI.Data_Access.AuthenticateRepo;
-using TestingKwikpikAPI.Data_Access.ConfirmBatchRequestRepo;
-using TestingKwikpikAPI.Data_Access.ConfirmSingleRequestRepo;
-using TestingKwikpikAPI.Data_Access.CreateBatchRequestRepo;
-using TestingKwikpikAPI.Data_Access.CreateSingleRequestRepo;
-using TestingKwikpikAPI.Data_Access.GetDispatchRequestRepo;
-using TestingKwikpikAPI.Data_Access.HomeRepo;
-using TestingKwikpikAPI.Data_Access.WalletRepo;
+using TestingKwikpikAPI.Application.AuthenticateRepo;
+using TestingKwikpikAPI.Application.BatchRequestConfirmationRepo;
+using TestingKwikpikAPI.Application.BatchRequestRepo;
+using TestingKwikpikAPI.Application.ConfirmSingleRequestRepo;
+using TestingKwikpikAPI.Application.CreateSingleRequestRepo;
+using TestingKwikpikAPI.Application.GetDispatchRequestRepo;
+using TestingKwikpikAPI.Application.HomeRepo;
+using TestingKwikpikAPI.Application.WalletRepo;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,9 +18,9 @@ builder.Services.AddHttpClient<IAuthenticateAPI, AuthenticateAPI>();
 builder.Services.AddHttpClient<IWalletAPI, WalletAPI>();
 builder.Services.AddHttpClient<IGetDispatchRequestAPI, GetDispatchRequestAPI>();
 builder.Services.AddHttpClient<ICreateSingleRequestAPI, CreateSingleRequestAPI>();
-builder.Services.AddHttpClient<ICreateBatchRequestAPI, CreateBatchRequestAPI>();
+builder.Services.AddHttpClient<IBatchRequestAPI, BatchRequestAPI>();
 builder.Services.AddHttpClient<IConfirmSingleRequestAPI, ConfirmSingleRequestAPI>();
-builder.Services.AddHttpClient<IConfirmBatchRequestAPI, ConfirmBatchRequestAPI>();
+builder.Services.AddHttpClient<IBatchRequestConfirmationAPI, BatchRequestConfirmationAPI>();
 
 var app = builder.Build();
 
