@@ -1,8 +1,9 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
+using TestingKwikpikAPI.Application.Interfaces;
 using TestingKwikpikAPI.Domain.Entities.CreateSingleRequest;
 
-namespace TestingKwikpikAPI.Application.CreateSingleRequestRepo
+namespace TestingKwikpikAPI.Application.Implementation
 {
     public class CreateSingleRequestAPI : ICreateSingleRequestAPI
     {
@@ -40,10 +41,8 @@ namespace TestingKwikpikAPI.Application.CreateSingleRequestRepo
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("X-API-Key", "fGKa77uvaeROvwh1MXR7X63VOtWXIomjBKQDbacI31EEafOD49Er4HXuALsc");
 
-                //var jsonContent = JsonContent.Create(payLoad);
                 var result = await httpClient.PostAsJsonAsync(uri, payLoad);
                 var response = await result.Content.ReadAsStringAsync();
-                //return EnumsImplementation.ConfirmationMessage(Enums.DispatchRequestCreated);
                 return JsonSerializer.Deserialize<CreateSingleRequest>(response);
             }
             catch (Exception)

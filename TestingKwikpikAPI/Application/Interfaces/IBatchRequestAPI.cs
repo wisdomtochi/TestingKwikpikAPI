@@ -1,6 +1,6 @@
 ﻿using TestingKwikpikAPI.Domain.Entities.BatchRequest;
 
-namespace TestingKwikpikAPI.Application.BatchRequestRepo
+namespace TestingKwikpikAPI.Application.Interfaces
 {
     public interface IBatchRequestAPI
     {

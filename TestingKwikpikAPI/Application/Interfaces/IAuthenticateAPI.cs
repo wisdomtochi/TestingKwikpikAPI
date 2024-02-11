@@ -1,6 +1,6 @@
 ﻿using TestingKwikpikAPI.Domain.Entities.Authenticate;
 
-namespace TestingKwikpikAPI.Application.AuthenticateRepo
+namespace TestingKwikpikAPI.Application.Interfaces
 {
     public interface IAuthenticateAPI
     {

@@ -1,8 +1,9 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
+using TestingKwikpikAPI.Application.Interfaces;
 using TestingKwikpikAPI.Domain.Entities.ConfirmSingleRequest;
 
-namespace TestingKwikpikAPI.Application.ConfirmSingleRequestRepo
+namespace TestingKwikpikAPI.Application.Implementation
 {
     public class ConfirmSingleRequestAPI : IConfirmSingleRequestAPI
     {

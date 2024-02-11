@@ -1,11 +1,5 @@
-using TestingKwikpikAPI.Application.AuthenticateRepo;
-using TestingKwikpikAPI.Application.BatchRequestConfirmationRepo;
-using TestingKwikpikAPI.Application.BatchRequestRepo;
-using TestingKwikpikAPI.Application.ConfirmSingleRequestRepo;
-using TestingKwikpikAPI.Application.CreateSingleRequestRepo;
-using TestingKwikpikAPI.Application.GetDispatchRequestRepo;
-using TestingKwikpikAPI.Application.HomeRepo;
-using TestingKwikpikAPI.Application.WalletRepo;
+using TestingKwikpikAPI.Application.Implementation;
+using TestingKwikpikAPI.Application.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

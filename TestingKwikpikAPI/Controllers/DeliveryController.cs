@@ -1,13 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TestingKwikpikAPI.Application.AuthenticateRepo;
-using TestingKwikpikAPI.Application.BatchRequestConfirmationRepo;
-using TestingKwikpikAPI.Application.BatchRequestRepo;
-using TestingKwikpikAPI.Application.ConfirmSingleRequestRepo;
-using TestingKwikpikAPI.Application.CreateSingleRequestRepo;
 using TestingKwikpikAPI.Application.ErrorRepo;
-using TestingKwikpikAPI.Application.GetDispatchRequestRepo;
-using TestingKwikpikAPI.Application.HomeRepo;
-using TestingKwikpikAPI.Application.WalletRepo;
+using TestingKwikpikAPI.Application.Interfaces;
 using TestingKwikpikAPI.Domain.Entities.BatchRequest;
 using TestingKwikpikAPI.Domain.Entities.BatchRequestConfirmation;
 using TestingKwikpikAPI.Domain.Entities.CreateSingleRequest;

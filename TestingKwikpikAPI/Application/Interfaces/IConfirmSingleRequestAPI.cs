@@ -1,6 +1,6 @@
 ﻿using TestingKwikpikAPI.Domain.Entities.ConfirmSingleRequest;
 
-namespace TestingKwikpikAPI.Application.ConfirmSingleRequestRepo
+namespace TestingKwikpikAPI.Application.Interfaces
 {
     public interface IConfirmSingleRequestAPI
     {

@@ -1,8 +1,9 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
+using TestingKwikpikAPI.Application.Interfaces;
 using TestingKwikpikAPI.Domain.Entities.GetDispatchRequest;
 
-namespace TestingKwikpikAPI.Application.GetDispatchRequestRepo
+namespace TestingKwikpikAPI.Application.Implementation
 {
     public class GetDispatchRequestAPI : IGetDispatchRequestAPI
     {

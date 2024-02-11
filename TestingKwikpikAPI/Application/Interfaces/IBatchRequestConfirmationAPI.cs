@@ -1,6 +1,6 @@
 ﻿using TestingKwikpikAPI.Domain.Entities.BatchRequestConfirmation;
 
-namespace TestingKwikpikAPI.Application.BatchRequestConfirmationRepo
+namespace TestingKwikpikAPI.Application.Interfaces
 {
     public interface IBatchRequestConfirmationAPI
     {

@@ -1,6 +1,6 @@
 ﻿using TestingKwikpikAPI.Domain.Entities.CreateSingleRequest;
 
-namespace TestingKwikpikAPI.Application.CreateSingleRequestRepo
+namespace TestingKwikpikAPI.Application.Interfaces
 {
     public interface ICreateSingleRequestAPI
     {

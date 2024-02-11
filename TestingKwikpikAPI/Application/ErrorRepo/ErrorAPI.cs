@@ -1,4 +1,6 @@
-﻿namespace TestingKwikpikAPI.Application.ErrorRepo
+﻿using TestingKwikpikAPI.Domain.Entities.Error;
+
+namespace TestingKwikpikAPI.Application.ErrorRepo
 {
     public static class ErrorAPI
     {

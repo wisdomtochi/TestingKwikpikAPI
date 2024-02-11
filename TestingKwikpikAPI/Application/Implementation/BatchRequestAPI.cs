@@ -1,8 +1,9 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
+using TestingKwikpikAPI.Application.Interfaces;
 using TestingKwikpikAPI.Domain.Entities.BatchRequest;
 
-namespace TestingKwikpikAPI.Application.BatchRequestRepo
+namespace TestingKwikpikAPI.Application.Implementation
 {
     public class BatchRequestAPI : IBatchRequestAPI
     {
