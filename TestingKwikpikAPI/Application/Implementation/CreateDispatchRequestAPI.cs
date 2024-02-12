@@ -1,41 +1,38 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
 using TestingKwikpikAPI.Application.Interfaces;
-using TestingKwikpikAPI.Domain.Entities.BatchRequest;
+using TestingKwikpikAPI.Domain.Entities.ConfirmSingleRequest;
 
 namespace TestingKwikpikAPI.Application.Implementation
 {
-    public class BatchRequestAPI : IBatchRequestAPI
+    public class CreateDispatchRequestAPI : IRequestConfirmationAPI
     {
         private readonly HttpClient httpClient;
 
-        public BatchRequestAPI(HttpClient httpClient)
+        public CreateDispatchRequestAPI(HttpClient httpClient)
         {
             this.httpClient = httpClient;
         }
-        public async Task<BatchRequest> CreateBatchRequest(BatchRequest batchRequest)
+        public async Task<ConfirmSingleRequest> ConfirmSingleRequest(string requestId)
         {
             try
             {
-                var request = new
+                var confirmSingleRequest = new
                 {
-                    data = batchRequest.result.data
+                    data = requestId
                 };
 
-                var baseUri = new Uri("https://dev-gateway.kwikpik.io/api/");
-                var uri = new Uri(baseUri, "broker/init_multiple_ride_request/business");
+                var baseUri = new Uri("https://dev-gateway.io/api/");
+                var uri = new Uri(baseUri + "broker/confirm_ride_request/business");
 
                 httpClient.BaseAddress = baseUri;
                 httpClient.DefaultRequestHeaders.Accept.Clear();
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("X-API-Key", "fGKa77uvaeROvwh1MXR7X63VOtWXIomjBKQDbacI31EEafOD49Er4HXuALsc");
 
-                //var jsonContent = JsonContent.Create(batchRequest);
-                var result = await httpClient.PostAsJsonAsync(uri, batchRequest);
+                var result = await httpClient.PostAsJsonAsync(uri, confirmSingleRequest);
                 var response = await result.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<BatchRequest>(response);
-                //return EnumsImplementation.ConfirmationMessage(Enums.BatchRequestCreated);
-
+                return JsonSerializer.Deserialize<ConfirmSingleRequest>(response);
             }
             catch (Exception)
             {

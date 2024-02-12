@@ -2,7 +2,6 @@
 using TestingKwikpikAPI.Application.ErrorRepo;
 using TestingKwikpikAPI.Application.Interfaces;
 using TestingKwikpikAPI.Domain.Entities.BatchRequest;
-using TestingKwikpikAPI.Domain.Entities.BatchRequestConfirmation;
 using TestingKwikpikAPI.Domain.Entities.CreateSingleRequest;
 
 namespace TestingKwikpikAPI.Controllers
@@ -14,19 +13,19 @@ namespace TestingKwikpikAPI.Controllers
         private readonly IHomeAPI homeAPI;
         private readonly IAuthenticateAPI authenticateAPI;
         private readonly IWalletAPI walletAPI;
-        private readonly ICreateSingleRequestAPI createSingleRequestAPI;
-        private readonly IConfirmSingleRequestAPI confirmSingleRequestAPI;
+        private readonly IDispatchRequestAPI createSingleRequestAPI;
+        private readonly IRequestConfirmationAPI confirmSingleRequestAPI;
         private readonly IBatchRequestAPI batchRequestAPI;
-        private readonly IBatchRequestConfirmationAPI batchRequestConfirmationAPI;
+        private readonly IConfirmBatchRequestAPI batchRequestConfirmationAPI;
         private readonly IGetDispatchRequestAPI getDispatchRequest;
 
         public DeliveryController(IHomeAPI homeAPI,
                                   IAuthenticateAPI authenticateAPI,
                                   IWalletAPI walletAPI,
-                                  ICreateSingleRequestAPI createSingleRequestAPI,
-                                  IConfirmSingleRequestAPI confirmSingleRequestAPI,
+                                  IDispatchRequestAPI createSingleRequestAPI,
+                                  IRequestConfirmationAPI confirmSingleRequestAPI,
                                   IBatchRequestAPI batchRequestAPI,
-                                  IBatchRequestConfirmationAPI batchRequestConfirmationAPI,
+                                  IConfirmBatchRequestAPI batchRequestConfirmationAPI,
                                   IGetDispatchRequestAPI getDispatchRequest)
         {
             this.homeAPI = homeAPI;
@@ -45,6 +44,7 @@ namespace TestingKwikpikAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Route("welcome")]
         public async Task<IActionResult> GetWelcomeMessage()
         {
             try
@@ -54,7 +54,8 @@ namespace TestingKwikpikAPI.Controllers
             }
             catch (Exception e)
             {
-                return (IActionResult)ErrorAPI.GetErrorMessage(e.Message);
+                var error = ErrorAPI.GetErrorMessage(e.Message);
+                return BadRequest(error);
             }
         }
         #endregion
@@ -65,6 +66,7 @@ namespace TestingKwikpikAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Route("authenticate")]
         public async Task<IActionResult> GetUserAuthentication()
         {
             try
@@ -74,7 +76,8 @@ namespace TestingKwikpikAPI.Controllers
             }
             catch (Exception e)
             {
-                return (IActionResult)ErrorAPI.GetErrorMessage(e.Message);
+                var error = ErrorAPI.GetErrorMessage(e.Message);
+                return BadRequest(error);
             }
         }
         #endregion
@@ -85,6 +88,7 @@ namespace TestingKwikpikAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Route("wallet")]
         public async Task<IActionResult> GetUserWallet()
         {
             try
@@ -94,28 +98,33 @@ namespace TestingKwikpikAPI.Controllers
             }
             catch (Exception e)
             {
-                return (IActionResult)ErrorAPI.GetErrorMessage(e.Message);
+                var error = ErrorAPI.GetErrorMessage(e.Message);
+                return BadRequest(error);
             }
         }
         #endregion
+
+        #region REQUESTS
 
         #region CREATE DISPATCH REQUEST
         /// <summary>
         /// Creates a dispatch for a user
         /// </summary>
-        /// <param name="CreateSingleRequestDTO"></param>
+        /// <param name="createSingleRequest"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> CreateSingleRequest(CreateSingleRequest CreateSingleRequestDTO)
+        //[Route("createsinglerequest")]
+        public async Task<IActionResult> CreateSingleRequest([FromBody] CreateSingleRequest createSingleRequest)
         {
             try
             {
-                var response = await createSingleRequestAPI.CreateSingleRequest(CreateSingleRequestDTO);
+                var response = await createSingleRequestAPI.CreateSingleRequest(createSingleRequest);
                 return Ok(response);
             }
             catch (Exception e)
             {
-                return (IActionResult)ErrorAPI.GetErrorMessage(e.Message);
+                var error = ErrorAPI.GetErrorMessage(e.Message);
+                return BadRequest(error);
             }
         }
         #endregion
@@ -126,8 +135,9 @@ namespace TestingKwikpikAPI.Controllers
         /// </summary>
         /// <param name="requestId"></param>
         /// <returns></returns>
-        [HttpPost("requestId")]
-        public async Task<IActionResult> ConfirmSingleRequest(string requestId)
+        [HttpPost]
+        [Route("confirmsinglerequest/{requestId}")]
+        public async Task<IActionResult> ConfirmSingleRequest([FromRoute] string requestId)
         {
             try
             {
@@ -136,7 +146,8 @@ namespace TestingKwikpikAPI.Controllers
             }
             catch (Exception e)
             {
-                return (IActionResult)ErrorAPI.GetErrorMessage(e.Message);
+                var error = ErrorAPI.GetErrorMessage(e.Message);
+                return BadRequest(error);
             }
         }
         #endregion
@@ -147,8 +158,9 @@ namespace TestingKwikpikAPI.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("id")]
-        public async Task<IActionResult> GetDispatchRequest(string id)
+        [HttpGet]
+        [Route("getdispatchrequest/{id}")]
+        public async Task<IActionResult> GetDispatchRequest([FromRoute] string id)
         {
             try
             {
@@ -157,7 +169,8 @@ namespace TestingKwikpikAPI.Controllers
             }
             catch (Exception e)
             {
-                return (IActionResult)ErrorAPI.GetErrorMessage(e.Message);
+                var error = ErrorAPI.GetErrorMessage(e.Message);
+                return BadRequest(error);
             }
         }
         #endregion
@@ -166,10 +179,11 @@ namespace TestingKwikpikAPI.Controllers
         /// <summary>
         /// Creates a batch request
         /// </summary>
-        /// <param name="createBatch"></param>
-        /// <returns></returns>
+        /// <param name = "createBatch" ></ param >
+        /// < returns ></ returns>
         [HttpPost]
-        public async Task<IActionResult> CreateBatchRequest(BatchRequest createBatch)
+        [Route("createbatchrequest")]
+        public async Task<IActionResult> CreateBatchRequest([FromBody] BatchRequest createBatch)
         {
             try
             {
@@ -178,7 +192,8 @@ namespace TestingKwikpikAPI.Controllers
             }
             catch (Exception e)
             {
-                return (IActionResult)ErrorAPI.GetErrorMessage(e.Message);
+                var error = ErrorAPI.GetErrorMessage(e.Message);
+                return BadRequest(error);
             }
         }
         #endregion
@@ -187,21 +202,25 @@ namespace TestingKwikpikAPI.Controllers
         /// <summary>
         /// Confirms the batch request just created
         /// </summary>
-        /// <param name="confirmBatchRequest"></param>
+        /// <param name="batchRequestConfirmation"></param>
         /// <returns></returns>
-        [HttpPost]
-        public async Task<IActionResult> ConfirmBatch(BatchRequestConfirmation confirmBatchRequest)
-        {
-            try
-            {
-                var result = await batchRequestConfirmationAPI.ConfirmBatchRequest(confirmBatchRequest);
-                return Ok(result);
-            }
-            catch (Exception e)
-            {
-                return (IActionResult)ErrorAPI.GetErrorMessage(e.Message);
-            }
-        }
+        //[HttpPost]
+        //[Route("batchconfirmation")]
+        //public async Task<IActionResult> ConfirmBatchRequest([FromBody] BatchRequestConfirmation batchRequestConfirmation)
+        //{
+        //    try
+        //    {
+        //        var result = await batchRequestConfirmationAPI.ConfirmBatchRequest(batchRequestConfirmation);
+        //        return Ok(result);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        var error = ErrorAPI.GetErrorMessage(e.Message);
+        //        return BadRequest(error);
+        //    }
+        //}
+        #endregion
+
         #endregion
     }
 }

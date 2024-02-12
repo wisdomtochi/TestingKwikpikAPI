@@ -2,7 +2,7 @@
 
 namespace TestingKwikpikAPI.Application.Interfaces
 {
-    public interface IBatchRequestConfirmationAPI
+    public interface IConfirmBatchRequestAPI
     {
         Task<BatchRequestConfirmation> ConfirmBatchRequest(BatchRequestConfirmation confirmBatchRequestDTO);
     }

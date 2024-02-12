@@ -2,7 +2,7 @@
 
 namespace TestingKwikpikAPI.Application.Interfaces
 {
-    public interface IConfirmSingleRequestAPI
+    public interface IRequestConfirmationAPI
     {
         Task<ConfirmSingleRequest> ConfirmSingleRequest(string requestId);
     }

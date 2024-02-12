@@ -2,7 +2,7 @@
 
 namespace TestingKwikpikAPI.Application.Interfaces
 {
-    public interface ICreateSingleRequestAPI
+    public interface IDispatchRequestAPI
     {
         Task<CreateSingleRequest> CreateSingleRequest(CreateSingleRequest CreateSingleRequestDTO);
     }

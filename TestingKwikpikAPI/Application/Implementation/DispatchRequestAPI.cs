@@ -5,11 +5,11 @@ using TestingKwikpikAPI.Domain.Entities.CreateSingleRequest;
 
 namespace TestingKwikpikAPI.Application.Implementation
 {
-    public class CreateSingleRequestAPI : ICreateSingleRequestAPI
+    public class DispatchRequestAPI : IDispatchRequestAPI
     {
         private readonly HttpClient httpClient;
 
-        public CreateSingleRequestAPI(HttpClient httpClient)
+        public DispatchRequestAPI(HttpClient httpClient)
         {
             this.httpClient = httpClient;
         }

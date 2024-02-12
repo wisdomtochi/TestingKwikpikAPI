@@ -1,7 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
 using TestingKwikpikAPI.Application.Interfaces;
-using TestingKwikpikAPI.Domain.Entities.Authenticate;
 
 namespace TestingKwikpikAPI.Application.Implementation
 {
@@ -13,7 +12,7 @@ namespace TestingKwikpikAPI.Application.Implementation
         {
             this.httpClient = httpClient;
         }
-        public async Task<Authenticate> GetAuthentication()
+        public async Task<AuthenticateAPI> GetAuthentication()
         {
             try
             {
@@ -24,7 +23,7 @@ namespace TestingKwikpikAPI.Application.Implementation
 
                 var result = await httpClient.GetAsync("business/authenticate");
                 var response = await result.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<Authenticate>(response);
+                return JsonSerializer.Deserialize<AuthenticateAPI>(response);
             }
             catch (Exception)
             {

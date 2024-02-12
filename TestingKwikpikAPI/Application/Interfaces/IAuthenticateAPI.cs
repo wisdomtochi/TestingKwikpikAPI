@@ -1,10 +1,10 @@
-﻿using TestingKwikpikAPI.Domain.Entities.Authenticate;
+﻿using TestingKwikpikAPI.Application.Implementation;
 
 namespace TestingKwikpikAPI.Application.Interfaces
 {
     public interface IAuthenticateAPI
     {
-        Task<Authenticate> GetAuthentication();
+        Task<AuthenticateAPI> GetAuthentication();
     }
 }
 

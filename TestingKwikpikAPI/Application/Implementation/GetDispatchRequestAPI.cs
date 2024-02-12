@@ -1,7 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
 using TestingKwikpikAPI.Application.Interfaces;
-using TestingKwikpikAPI.Domain.Entities.GetDispatchRequest;
 
 namespace TestingKwikpikAPI.Application.Implementation
 {
@@ -13,7 +12,7 @@ namespace TestingKwikpikAPI.Application.Implementation
         {
             httpClient = httpCLient;
         }
-        public async Task<GetDispatchRequest> GetDispatchRequest(string id)
+        public async Task<Domain.Entities.GetDispatchRequest.GetDispatchRequest> GetDispatchRequest(string id)
         {
             try
             {
@@ -24,7 +23,7 @@ namespace TestingKwikpikAPI.Application.Implementation
 
                 var result = await httpClient.GetAsync("ride_request/" + id);
                 var response = await result.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<GetDispatchRequest>(response);
+                return JsonSerializer.Deserialize<Domain.Entities.GetDispatchRequest.GetDispatchRequest>(response);
             }
             catch (Exception)
             {
