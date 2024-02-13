@@ -14,13 +14,13 @@ namespace TestingKwikpikAPI.Application.Implementation
             this.httpClient = httpClient;
         }
 
-        public async Task<BatchRequestConfirmation> ConfirmBatchRequest(BatchRequestConfirmation confirmBatchRequestDTO)
+        public async Task<ConfirmBatchRequest> ConfirmBatchRequest(ConfirmBatchRequest confirmBatchRequestDTO)
         {
             try
             {
                 var confirmBatchRequest = new
                 {
-                    result = confirmBatchRequestDTO.result
+                    confirmBatchRequestDTO.result
                 };
 
                 var baseUri = new Uri("https://dev-gateway.kwikpik.io/api/");
@@ -33,7 +33,7 @@ namespace TestingKwikpikAPI.Application.Implementation
 
                 var result = await httpClient.PostAsJsonAsync(uri, confirmBatchRequest);
                 var response = await result.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<BatchRequestConfirmation>(response);
+                return JsonSerializer.Deserialize<ConfirmBatchRequest>(response);
             }
             catch (Exception)
             {

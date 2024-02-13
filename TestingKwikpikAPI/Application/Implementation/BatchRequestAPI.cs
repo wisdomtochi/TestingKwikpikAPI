@@ -19,7 +19,7 @@ namespace TestingKwikpikAPI.Application.Implementation
             {
                 var request = new
                 {
-                    data = batchRequest.result.data
+                    batchRequest.result.datum
                 };
 
                 var baseUri = new Uri("https://dev-gateway.kwikpik.io/api/");

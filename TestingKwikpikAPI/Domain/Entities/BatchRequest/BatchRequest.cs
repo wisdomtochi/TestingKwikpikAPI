@@ -7,7 +7,7 @@
 
     public class Result
     {
-        public Datum[] data { get; set; }
+        public Datum[] datum { get; set; }
     }
 
     public class Datum

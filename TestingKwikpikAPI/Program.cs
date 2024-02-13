@@ -11,7 +11,7 @@ builder.Services.AddHttpClient<IHomeAPI, HomeAPI>();
 builder.Services.AddHttpClient<IAuthenticateAPI, AuthenticateAPI>();
 builder.Services.AddHttpClient<IWalletAPI, WalletAPI>();
 builder.Services.AddHttpClient<IGetDispatchRequestAPI, GetDispatchRequestAPI>();
-builder.Services.AddHttpClient<IDispatchRequestAPI, DispatchRequestAPI>();
+builder.Services.AddHttpClient<IDispatchRequestAPI, ConfirmDispatchRequestAPI>();
 builder.Services.AddHttpClient<IBatchRequestAPI, BatchRequestAPI>();
 builder.Services.AddHttpClient<IRequestConfirmationAPI, CreateDispatchRequestAPI>();
 builder.Services.AddHttpClient<IConfirmBatchRequestAPI, ConfirmBatchRequestAPI>();

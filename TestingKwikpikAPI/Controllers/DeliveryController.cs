@@ -2,7 +2,7 @@
 using TestingKwikpikAPI.Application.ErrorRepo;
 using TestingKwikpikAPI.Application.Interfaces;
 using TestingKwikpikAPI.Domain.Entities.BatchRequest;
-using TestingKwikpikAPI.Domain.Entities.CreateSingleRequest;
+using TestingKwikpikAPI.Domain.Entities.BatchRequestConfirmation;
 
 namespace TestingKwikpikAPI.Controllers
 {
@@ -112,21 +112,21 @@ namespace TestingKwikpikAPI.Controllers
         /// </summary>
         /// <param name="createSingleRequest"></param>
         /// <returns></returns>
-        [HttpPost]
-        //[Route("createsinglerequest")]
-        public async Task<IActionResult> CreateSingleRequest([FromBody] CreateSingleRequest createSingleRequest)
-        {
-            try
-            {
-                var response = await createSingleRequestAPI.CreateSingleRequest(createSingleRequest);
-                return Ok(response);
-            }
-            catch (Exception e)
-            {
-                var error = ErrorAPI.GetErrorMessage(e.Message);
-                return BadRequest(error);
-            }
-        }
+        //[HttpPost]
+        ////[Route("createsinglerequest")]
+        //public async Task<IActionResult> CreateDispatchRequest([FromBody] CreateSingleRequest createSingleRequest)
+        //{
+        //    try
+        //    {
+        //        var response = await createSingleRequestAPI.CreateSingleRequest(createSingleRequest);
+        //        return Ok(response);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        var error = ErrorAPI.GetErrorMessage(e.Message);
+        //        return BadRequest(error);
+        //    }
+        //}
         #endregion
 
         #region CONFIRM DISPATCH REQUEST
@@ -204,21 +204,21 @@ namespace TestingKwikpikAPI.Controllers
         /// </summary>
         /// <param name="batchRequestConfirmation"></param>
         /// <returns></returns>
-        //[HttpPost]
-        //[Route("batchconfirmation")]
-        //public async Task<IActionResult> ConfirmBatchRequest([FromBody] BatchRequestConfirmation batchRequestConfirmation)
-        //{
-        //    try
-        //    {
-        //        var result = await batchRequestConfirmationAPI.ConfirmBatchRequest(batchRequestConfirmation);
-        //        return Ok(result);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        var error = ErrorAPI.GetErrorMessage(e.Message);
-        //        return BadRequest(error);
-        //    }
-        //}
+        [HttpPost]
+        [Route("batchconfirmation")]
+        public async Task<IActionResult> ConfirmBatchRequest([FromBody] ConfirmBatchRequest confirmBatch)
+        {
+            try
+            {
+                var result = await batchRequestConfirmationAPI.ConfirmBatchRequest(confirmBatch);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                var error = ErrorAPI.GetErrorMessage(e.Message);
+                return BadRequest(error);
+            }
+        }
         #endregion
 
         #endregion
